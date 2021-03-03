@@ -1,0 +1,25 @@
+EndingAddress     512108789759
+StartingAddress   1048576
+Antecedent        \\SADIE\root\cimv2:Win32_DiskPartition.DeviceID="Disk #0, Partition #0"
+Dependent         \\SADIE\root\cimv2:Win32_LogicalDisk.DeviceID="C:"
+---
+EndingAddress     2000396321279
+StartingAddress   32256
+Antecedent        \\SADIE\root\cimv2:Win32_DiskPartition.DeviceID="Disk #3, Partition #0"
+Dependent         \\SADIE\root\cimv2:Win32_LogicalDisk.DeviceID="D:"
+---
+EndingAddress     490037506559
+StartingAddress   32256
+Antecedent        \\SADIE\root\cimv2:Win32_DiskPartition.DeviceID="Disk #2, Partition #0"
+Dependent         \\SADIE\root\cimv2:Win32_LogicalDisk.DeviceID="E:"
+---
+EndingAddress     1000202273279
+StartingAddress   8257536
+Antecedent        \\SADIE\root\cimv2:Win32_DiskPartition.DeviceID="Disk #4, Partition #0"
+Dependent         \\SADIE\root\cimv2:Win32_LogicalDisk.DeviceID="F:"
+---
+EndingAddress     2000397795327
+StartingAddress   1048576
+Antecedent        \\SADIE\root\cimv2:Win32_DiskPartition.DeviceID="Disk #1, Partition #0"
+Dependent         \\SADIE\root\cimv2:Win32_LogicalDisk.DeviceID="G:"
+---

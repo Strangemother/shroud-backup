@@ -1,0 +1,265 @@
+Capabilities3
+Capabilities4
+CapabilityDescriptionsRandom Access
+CapabilityDescriptionsSupports Writing
+Availability                    None
+BytesPerSector                  512
+Caption                         Hitachi HDS5C3020ALA632 ATA Device
+CompressionMethod               None
+ConfigManagerErrorCode          0
+ConfigManagerUserConfig         False
+CreationClassName               Win32_DiskDrive
+DefaultBlockSize                None
+Description                     Disk drive
+DeviceID                        \\.\PHYSICALDRIVE1
+ErrorCleared                    None
+ErrorDescription                None
+ErrorMethodology                None
+FirmwareRevision                ML6OAA10
+Index                           1
+InstallDate                     None
+InterfaceType                   IDE
+LastErrorCode                   None
+Manufacturer                    (Standard disk drives)
+MaxBlockSize                    None
+MaxMediaSize                    None
+MediaLoaded                     True
+MediaType                       Fixed hard disk media
+MinBlockSize                    None
+Model                           Hitachi HDS5C3020ALA632 ATA Device
+Name                            \\.\PHYSICALDRIVE1
+NeedsCleaning                   None
+NumberOfMediaSupported          None
+Partitions                      1
+PNPDeviceID                     IDE\DISKHITACHI_HDS5C3020ALA632_________________ML6OAA10\5&3ACDA91B&0&1.0.0
+PowerManagementSupported        None
+SCSIBus                         1
+SCSILogicalUnit                 0
+SCSIPort                        5
+SCSITargetId                    0
+SectorsPerTrack                 63
+SerialNumber                    2020202020204c4d323030334146553055444457
+Signature                       64831937
+Size                            2000396321280
+Status                          OK
+StatusInfo                      None
+SystemCreationClassName         Win32_ComputerSystem
+SystemName                      SADIE
+TotalCylinders                  243201
+TotalHeads                      255
+TotalSectors                    3907024065
+TotalTracks                     62016255
+TracksPerCylinder               255
+---
+Capabilities3
+Capabilities4
+CapabilityDescriptionsRandom Access
+CapabilityDescriptionsSupports Writing
+Availability                    None
+BytesPerSector                  512
+Caption                         Hitachi HDT721010SLA360 ATA Device
+CompressionMethod               None
+ConfigManagerErrorCode          0
+ConfigManagerUserConfig         False
+CreationClassName               Win32_DiskDrive
+DefaultBlockSize                None
+Description                     Disk drive
+DeviceID                        \\.\PHYSICALDRIVE4
+ErrorCleared                    None
+ErrorDescription                None
+ErrorMethodology                None
+FirmwareRevision                ST6OA31B
+Index                           4
+InstallDate                     None
+InterfaceType                   IDE
+LastErrorCode                   None
+Manufacturer                    (Standard disk drives)
+MaxBlockSize                    None
+MaxMediaSize                    None
+MediaLoaded                     True
+MediaType                       Fixed hard disk media
+MinBlockSize                    None
+Model                           Hitachi HDT721010SLA360 ATA Device
+Name                            \\.\PHYSICALDRIVE4
+NeedsCleaning                   None
+NumberOfMediaSupported          None
+Partitions                      1
+PNPDeviceID                     IDE\DISKHITACHI_HDT721010SLA360_________________ST6OA31B\5&3B431232&0&0.0.0
+PowerManagementSupported        None
+SCSIBus                         0
+SCSILogicalUnit                 0
+SCSIPort                        4
+SCSITargetId                    0
+SectorsPerTrack                 63
+SerialNumber                    202020202020545336463730534d4e314b304b58
+Signature                       1292585900
+Size                            1000202273280
+Status                          OK
+StatusInfo                      None
+SystemCreationClassName         Win32_ComputerSystem
+SystemName                      SADIE
+TotalCylinders                  121601
+TotalHeads                      255
+TotalSectors                    1953520065
+TotalTracks                     31008255
+TracksPerCylinder               255
+---
+Capabilities3
+Capabilities4
+CapabilityDescriptionsRandom Access
+CapabilityDescriptionsSupports Writing
+Availability                    None
+BytesPerSector                  512
+Caption                         SAMSUNG HD204UI ATA Device
+CompressionMethod               None
+ConfigManagerErrorCode          0
+ConfigManagerUserConfig         False
+CreationClassName               Win32_DiskDrive
+DefaultBlockSize                None
+Description                     Disk drive
+DeviceID                        \\.\PHYSICALDRIVE3
+ErrorCleared                    None
+ErrorDescription                None
+ErrorMethodology                None
+FirmwareRevision                1AQ10001
+Index                           3
+InstallDate                     None
+InterfaceType                   IDE
+LastErrorCode                   None
+Manufacturer                    (Standard disk drives)
+MaxBlockSize                    None
+MaxMediaSize                    None
+MediaLoaded                     True
+MediaType                       Fixed hard disk media
+MinBlockSize                    None
+Model                           SAMSUNG HD204UI ATA Device
+Name                            \\.\PHYSICALDRIVE3
+NeedsCleaning                   None
+NumberOfMediaSupported          None
+Partitions                      1
+PNPDeviceID                     IDE\DISKSAMSUNG_HD204UI_________________________1AQ10001\5&2813F876&0&2.0.0
+PowerManagementSupported        None
+SCSIBus                         2
+SCSILogicalUnit                 0
+SCSIPort                        6
+SCSITargetId                    0
+SectorsPerTrack                 63
+SerialNumber                    32534748314a5a41304135333637202020202020
+Signature                       -756207662
+Size                            2000396321280
+Status                          OK
+StatusInfo                      None
+SystemCreationClassName         Win32_ComputerSystem
+SystemName                      SADIE
+TotalCylinders                  243201
+TotalHeads                      255
+TotalSectors                    3907024065
+TotalTracks                     62016255
+TracksPerCylinder               255
+---
+Capabilities3
+Capabilities4
+CapabilityDescriptionsRandom Access
+CapabilityDescriptionsSupports Writing
+Availability                    None
+BytesPerSector                  512
+Caption                         Samsung SSD 840 PRO Series ATA Device
+CompressionMethod               None
+ConfigManagerErrorCode          0
+ConfigManagerUserConfig         False
+CreationClassName               Win32_DiskDrive
+DefaultBlockSize                None
+Description                     Disk drive
+DeviceID                        \\.\PHYSICALDRIVE0
+ErrorCleared                    None
+ErrorDescription                None
+ErrorMethodology                None
+FirmwareRevision                DXM05B0Q
+Index                           0
+InstallDate                     None
+InterfaceType                   IDE
+LastErrorCode                   None
+Manufacturer                    (Standard disk drives)
+MaxBlockSize                    None
+MaxMediaSize                    None
+MediaLoaded                     True
+MediaType                       Fixed hard disk media
+MinBlockSize                    None
+Model                           Samsung SSD 840 PRO Series ATA Device
+Name                            \\.\PHYSICALDRIVE0
+NeedsCleaning                   None
+NumberOfMediaSupported          None
+Partitions                      1
+PNPDeviceID                     IDE\DISKSAMSUNG_SSD_840_PRO_SERIES______________DXM05B0Q\5&1EFB7D31&0&0.1.0
+PowerManagementSupported        None
+SCSIBus                         0
+SCSILogicalUnit                 0
+SCSIPort                        0
+SCSITargetId                    1
+SectorsPerTrack                 63
+SerialNumber                    31535841534e4641303231353534204220202020
+Signature                       1132139852
+Size                            512105932800
+Status                          OK
+StatusInfo                      None
+SystemCreationClassName         Win32_ComputerSystem
+SystemName                      SADIE
+TotalCylinders                  62260
+TotalHeads                      255
+TotalSectors                    1000206900
+TotalTracks                     15876300
+TracksPerCylinder               255
+---
+Capabilities3
+Capabilities4
+CapabilityDescriptionsRandom Access
+CapabilityDescriptionsSupports Writing
+Availability                    None
+BytesPerSector                  512
+Caption                         ST3500418AS ATA Device
+CompressionMethod               None
+ConfigManagerErrorCode          0
+ConfigManagerUserConfig         False
+CreationClassName               Win32_DiskDrive
+DefaultBlockSize                None
+Description                     Disk drive
+DeviceID                        \\.\PHYSICALDRIVE2
+ErrorCleared                    None
+ErrorDescription                None
+ErrorMethodology                None
+FirmwareRevision                CC38
+Index                           2
+InstallDate                     None
+InterfaceType                   IDE
+LastErrorCode                   None
+Manufacturer                    (Standard disk drives)
+MaxBlockSize                    None
+MaxMediaSize                    None
+MediaLoaded                     True
+MediaType                       Fixed hard disk media
+MinBlockSize                    None
+Model                           ST3500418AS ATA Device
+Name                            \\.\PHYSICALDRIVE2
+NeedsCleaning                   None
+NumberOfMediaSupported          None
+Partitions                      2
+PNPDeviceID                     IDE\DISKST3500418AS_____________________________CC38____\5&155A47D1&0&3.0.0
+PowerManagementSupported        None
+SCSIBus                         3
+SCSILogicalUnit                 0
+SCSIPort                        7
+SCSITargetId                    0
+SectorsPerTrack                 63
+SerialNumber                    2020202020202020202020205635394d58564e46
+Signature                       173495
+Size                            500105249280
+Status                          OK
+StatusInfo                      None
+SystemCreationClassName         Win32_ComputerSystem
+SystemName                      SADIE
+TotalCylinders                  60801
+TotalHeads                      255
+TotalSectors                    976768065
+TotalTracks                     15504255
+TracksPerCylinder               255
+---

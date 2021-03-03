@@ -1,0 +1,18 @@
+Antecedent   \\SADIE\root\cimv2:Win32_DiskDrive.DeviceID="\\\\.\\PHYSICALDRIVE1"
+Dependent    \\SADIE\root\cimv2:Win32_DiskPartition.DeviceID="Disk #1, Partition #0"
+---
+Antecedent   \\SADIE\root\cimv2:Win32_DiskDrive.DeviceID="\\\\.\\PHYSICALDRIVE4"
+Dependent    \\SADIE\root\cimv2:Win32_DiskPartition.DeviceID="Disk #4, Partition #0"
+---
+Antecedent   \\SADIE\root\cimv2:Win32_DiskDrive.DeviceID="\\\\.\\PHYSICALDRIVE3"
+Dependent    \\SADIE\root\cimv2:Win32_DiskPartition.DeviceID="Disk #3, Partition #0"
+---
+Antecedent   \\SADIE\root\cimv2:Win32_DiskDrive.DeviceID="\\\\.\\PHYSICALDRIVE0"
+Dependent    \\SADIE\root\cimv2:Win32_DiskPartition.DeviceID="Disk #0, Partition #0"
+---
+Antecedent   \\SADIE\root\cimv2:Win32_DiskDrive.DeviceID="\\\\.\\PHYSICALDRIVE2"
+Dependent    \\SADIE\root\cimv2:Win32_DiskPartition.DeviceID="Disk #2, Partition #0"
+---
+Antecedent   \\SADIE\root\cimv2:Win32_DiskDrive.DeviceID="\\\\.\\PHYSICALDRIVE2"
+Dependent    \\SADIE\root\cimv2:Win32_DiskPartition.DeviceID="Disk #2, Partition #1"
+---
