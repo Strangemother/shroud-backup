@@ -7,3 +7,123 @@ body, html {
     font-family: 'Roboto', sans-serif;
 }
 
+.led {
+    border: solid 2px #7e7b86;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background: red;
+}
+
+.connected .led {
+    background: green;
+}
+
+div#socket-bar {
+    border-top: dashed 2px #111;
+    margin: 0.7em;
+    padding: 0.7em 0 0;
+}
+
+
+.horiz {
+    display: flex;
+}
+
+.drive-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em;
+    background: #111;
+    /* justify-content: space-evenly; */
+}
+
+.drive-item {
+    min-width: 10em;
+    padding: 0.5em 0;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0.2rem 0.2rem;
+}
+
+.drive-item:focus,.drive-item:hover {
+    background: #000;
+    outline: none;
+}
+
+.drive-item.selected, .drive-item.selected.suggested {
+    background: #12403c;
+}
+
+.drive-item.suggested {
+    background: #494e2b;
+}
+
+.align-right {
+    justify-content: flex-end;
+}
+
+button {
+    font-family: inherit;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    background: #111;
+    border: none;
+    border-radius: 4px;
+    color: inherit;
+    letter-spacing: 0.7px;
+    cursor: pointer;
+}
+
+.actions {
+    margin: 0.5em;
+    gap: 0.5em;
+}
+
+button.positive {
+    background: #136d62;
+}
+
+button[disabled] {
+    opacity: .4;
+    cursor: default;
+}
+
+button.yellow {
+    background: #b1330c;
+}
+
+.grow {
+    flex-grow: 1;
+}
+
+.flex {
+    display: flex;
+}
+
+.gap {gap: .5em;}
+
+.instancename-input input {
+    background: #111;
+    border: none;
+    font-size: 1.6em;
+    font-family: inherit;
+    color: inherit;
+    padding: 1.4rem 2rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.instancename-input {
+    background: #171717;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    padding: 1em 0 2em;
+}
+
+.labels-container > div {
+    padding-right: .5em;
+}

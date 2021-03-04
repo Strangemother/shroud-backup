@@ -1,0 +1,17 @@
+{% load static %}
+
+<div id="websockets">
+    {% verbatim %}
+
+    <div id="socket-bar">
+        <div :class="['indicator', {'connected': connected}]">
+            <div class="led"></div>
+        </div>
+
+        <div class="url">{{ url }}</div>
+    </div>
+    {% endverbatim %}
+
+</div>
+
+<script src="{% static 'js/localsockets.js' %}"></script>

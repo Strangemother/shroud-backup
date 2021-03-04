@@ -176,6 +176,18 @@ win_queries = (
 )
 
 
+import re
+
+def camel_to_snake(name):
+  name = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', name)
+  return re.sub('([a-z0-9])([A-Z])', r'\1_\2', name).lower()
+
+
+def get_logical(fields=None):
+    name = 'Win32_LogicalDisk'
+    fields = fields or logical_fields
+    return make(*arrange(name, fields))
+
 
 def make(query, fields, filename):
     items = objSWbemServices.ExecQuery(query)
@@ -187,8 +199,12 @@ def make(query, fields, filename):
 
     _max = max([len(x[0]) for x in fields]) + 3
 
+    res = []
+    case_convert = camel_to_snake
+
     for objItem in items:
 
+        o = {}
         for field, _type in fields:
             if field.endswith('[]'):
                 name = field[:-2]
@@ -197,14 +213,16 @@ def make(query, fields, filename):
                     #print('missing', name)
                     continue
                 for x in d:
-                    out(name, x)
+                    o[case_convert(name)] = x
                 continue
 
             d = getattr(objItem, field)
-            out(f'{field:<{_max}}', d)
+            # out(f'{field:<{_max}}', d)
+            o[case_convert(field)] = d
 
-        out("---")
-
+        res.append(o)
+        # o("---")
+    return res
 
 
 if __name__ == '__main__':

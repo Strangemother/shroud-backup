@@ -1,4 +1,47 @@
 {% extends "base.html" %}
+{% load static %}
 {% block body %}
-    <p>Welcome.</p>
+
+    <div id="welcome">
+        <h1>Welcome</h1>
+        <div class="instancename-input">
+            <p>Name this instance</p>
+            <input type="text" v-model='instanceName'>
+        </div>
+    </div>
+
+    <div>
+        <h2>Choose</h2>
+        <p>Select target drives</p>
+        {% include "desktop/drives.html" %}
+    </div>
+
+    <div id="action_track">
+        {% verbatim %}
+
+        <div class="actions horiz">
+
+            <div class="flex align-right grow gap">
+                <div v-if='[undefined, 0].indexOf(store.selectedDrives.length)>-1'>
+                    <button
+                        @click='selectDefaultDrives'
+                        class='yellow'>Select Default</button>
+                </div>
+
+                <div v-if='store.selectedDrives.length != undefined'>
+                    <button @click='selectedDrives'
+                        :data-disabled='store.selectedDrives.length == 0'
+                        class='positive'>Select {{ store.selectedDrives.length }}</button>
+                </div>
+            </div>
+        </div>
+        {% endverbatim %}
+    </div>
+
 {% endblock body %}
+
+{% block footer_js %}
+<script src="{% static 'js/desktop/welcome.js' %}"></script>
+<script src="{% static 'js/desktop/drives.js' %}"></script>
+{% endblock footer_js %}
+

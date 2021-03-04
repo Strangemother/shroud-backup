@@ -11,12 +11,12 @@ https://docs.microsoft.com/en-us/windows/win32/cimwin32prov/win32-logicaldisk
      CreationClassName               Win32_LogicalDisk
      Description                     Local Fixed Disk
      DeviceID                        C:
-     DriveType                       3
+    *DriveType                       3
      ErrorCleared                    None
      ErrorDescription                None
      ErrorMethodology                None
      FileSystem                      NTFS
-     FreeSpace                       83105959936
+    *FreeSpace                       83105959936
      InstallDate                     None
      LastErrorCode                   None
      MaximumComponentLength          255
@@ -50,6 +50,9 @@ Usage:
 
 + **VolumeName**
   Preferred Name for the drive
+
++ **FreeSpace**:
+  To calculate the total _potential inital_ size required
 
 + **Name**
   if the Volume name is None

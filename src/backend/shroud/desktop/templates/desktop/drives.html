@@ -1,0 +1,32 @@
+{% load static %}
+
+
+<div class="drive-list-container" id="drives">
+    <div class="drive-list">
+
+        <div :class="['drive-item', { suggested: disk.suggested, selected: selected.has(index)}]"
+            :tabindex="index+1"
+            @click="toggleSelect(disk, index)"
+            v-for='(disk, index) in disks'>
+
+            <div class="horiz">
+                <div class="icon-container">
+
+                    <div class="icon">
+                        <div class="img-container"><img src="{% static 'img/icons/hdd_64.png' %}" alt="HDD"></div>
+                    </div>
+                </div>
+                <div class="labels-container">
+                    {% verbatim %}
+                    <div class="name">{{ disk.name }}</div>
+                    <div class="volume_name">{{ disk.volume_name }}</div>
+                    <div class="drive_type_str">{{ disk.drive_type_str }}</div>
+
+                    {% endverbatim %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
