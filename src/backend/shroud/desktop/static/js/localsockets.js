@@ -2,13 +2,13 @@ var client_id = Date.now()
 var ipAddress = '127.0.0.1'
 var port = 8000
 
-var app
+var socketApp
 var socket
 
 
 const localSocketAutoMain = function(){
-    app = Vue.createApp(RootComponent)
-    socket = app.mount('#websockets')
+    socketApp = Vue.createApp(RootComponent)
+    socket = socketApp.mount('#websockets')
 }
 
 const RootComponent = {
@@ -34,9 +34,14 @@ const RootComponent = {
             ws.onerror = this.onerror.bind(this)
             ws.onclose = this.onclose.bind(this)
         }
+        , reconnect(){
+            if(!this.connected) {
+                this.connect()
+            }
+        }
 
         , onmessage(event) {
-            console.log('event', event)
+            //console.log('event', event)
             // console.log('data ', event.data)
             this.digestMessage(event)
         }
@@ -87,16 +92,29 @@ const RootComponent = {
             let id = data['_id']
 
             if(this.callbacks[id] != undefined) {
-                this.callbacks[id](data, event)
-                delete this.callbacks[id]
+                let _f = this.callbacks[id].callback || this.callbacks[id]
+                let weak = this.callbacks[id].weakRef
+                _f(data, event)
+                if(weak === true) {
+                    this.deleteHandler(id)
+                }
             }
         }
-        , request(dataKey, callback) {
-            this.send({ 'type': 'request', 'key': dataKey}, callback)
+        , deleteHandler(id) {
+            delete this.callbacks[id]
+        }
+        , request(dataKey, callback, weakRef) {
+            this.send({ 'type': 'request', 'key': dataKey}, callback, weakRef)
         }
 
-        , send(message, callback) {
+        , send(message, callback, weakRef) {
+            /*
+            Send a message object or string as a JSON converted string
+            to the websocket server.
 
+                let event = { 'type': 'store', key:'drives', drives }
+                socket.send(event, this.driveContent.bind(this))
+             */
             let id = message['_id'] || Math.random().toString(32)
 
             if(typeof(message) == 'string') {
@@ -107,7 +125,7 @@ const RootComponent = {
 
             message['_id'] = id
             if(callback) {
-                this.callbacks[id] = callback
+                this.callbacks[id] = {weakRef, callback}
             }
 
             if(this.connected == false) {

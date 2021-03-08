@@ -1,0 +1,44 @@
+{% verbatim %}
+<div class="tag-popup-template">
+    <teleport to='#popup_container'>
+
+        <div class="tag popup"
+            @mousemove='mousemoveHandler'
+            @mouseup='mouseupHandler'
+            :style='styles'>
+
+            <div class="name horiz">
+                <div class="drag-handle horiz stretch"
+                    @mousedown='mousedownHandler'>
+                    <div class="type">Tag</div>
+                    <div class="index">{{ index }}</div>
+                    <div class="name stretch">{{ popup.name || popup.path }}</div>
+                </div>
+                <div class="close">
+                    <a href="#" @click='close' class="close btn thin">X</a>
+                </div>
+            </div>
+            <div class="tag-list-container">
+                <ul class="tag-list">
+                    <li class="tag-item" v-for='tag in tags'>
+                        <label>
+                            <input type="checkbox" v-model='tag.selected'>
+                            <span class="label">{{ tag.label }}</span>
+                        </label>
+                    </li>
+                </ul>
+                <div class="horiz">
+
+                    <input type="text"
+                        v-model='newTag'
+                        @keypress.enter='addTag'>
+                    <div>
+                        <a href="#" @click='saveTags' class="save btn">Save</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </teleport>
+</div>
+
+{% endverbatim %}

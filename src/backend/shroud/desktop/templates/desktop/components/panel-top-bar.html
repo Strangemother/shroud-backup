@@ -1,0 +1,20 @@
+{% verbatim %}
+<div class="top-bar">
+    <div class="count">{{ files.length }}</div>
+    <div class="home">
+        <a href="#" @click='homeReset' class="btn reset">+</a>
+    </div>
+
+    <div class="path">
+        <address-bar
+            ref='addressBar'
+            @navigate='addressBarNavigate'
+            :currentPath="currentPath">
+        </address-bar>
+        <div class="search-container">
+            <input type="text" placeholder="search" class='search-input'>
+        </div>
+    </div>
+
+</div>
+{% endverbatim %}

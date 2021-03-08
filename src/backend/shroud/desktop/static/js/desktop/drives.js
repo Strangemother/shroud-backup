@@ -18,7 +18,7 @@ const DrivesPanelComponent = {
     , mounted(){
         console.log('Drives')
         // sendMessage('drives')
-        socket.request('drives', this.driveContent.bind(this))
+        socket.request('drives', this.driveContent.bind(this), false)
     }
 
     , methods: {
@@ -48,9 +48,10 @@ const DrivesPanelComponent = {
 
         , driveContent(data){
             console.log('driveContent', data)
-            if( data.logical == undefined) {
-                socket.callbacks[data._id] = this.driveContent.bind(this)
+            if(data.logical == undefined) {
+                //socket.callbacks[data._id] = this.driveContent.bind(this)
                 this.disks = data.letters
+                return
             }
 
             this.applySuggestions(data.logical)

@@ -1,0 +1,20 @@
+{% verbatim %}
+<div class="popup-suite">
+    <div class="popups">
+        <div class="popup-panel" v-for='(popup, index) in popups'>
+            <component
+                @close='closePopup'
+                @popupdragging='popupdragging'
+                :popup='popup'
+                :index='index'
+                :is='popup.type'></component>
+        </div>
+    </div>
+
+    <div id="popup_container"></div>
+    <div id="privacy_panel"
+        :class='{dragging:dragging}'
+        @mousemove='mousemoveHandler'
+        @mouseup='mouseupHandler'></div>
+</div>
+{% endverbatim %}

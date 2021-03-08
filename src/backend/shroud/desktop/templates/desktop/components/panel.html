@@ -1,0 +1,24 @@
+{% load static %}
+{% verbatim %}
+<div class="panel-template">
+    <div class="panel">
+
+        <div class="tabname">
+
+            <span class="text">{{ config.title }}</span>
+            <input type="text"
+                class='panel-title hidden'
+                v-model="config.title">
+            <a href="#" @click='closePanel' class="close">close</a>
+        </div>
+
+        <div class="file-list-container">
+{% endverbatim %}
+            {% include "desktop/components/panel-file-view.html" %}
+{% verbatim %}
+        </div>
+
+
+    </div>
+</div>
+{% endverbatim %}

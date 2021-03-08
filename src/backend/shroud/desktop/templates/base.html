@@ -8,19 +8,57 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
 
     <script src="{% static 'js/vue.global.js' %}"></script>
+    <script src="{% static 'js/shared.js' %}"></script>
     <script src="{% static 'js/global-state.js' %}"></script>
 </head>
+
 <body>
-    {% block body %}
+    <div class="body-container">
+        {% block body %}
+        {% endblock body %}
+        {% include "sockets.html" %}
 
-    {% endblock body %}
 
-    {% include "sockets.html" %}
+    </div>
+
+    {% verbatim %}
+    <div class="templates">
+        <div class="button-counter">
+            <button @click="count++">
+                You clicked me {{ count }} times.
+            </button>
+        </div>
+
+        <div class="address-bar-template">
+            <div class="address-bar scrollbar">
+                <!-- <div>currentpath: {{ currentpath }}</div>
+                <div>path: {{ path }}</div> -->
+                <ul class='address-path'>
+                    <li v-for='(part, index) in path' class='address-item'>
+                        <div class="path-part" :index=index>
+                            <span
+                                @click='pathPartClick(index, part)'
+                                class='address-label'>{{ part }}</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    {% endverbatim %}
+
+        {% include "desktop/components/tag-popup-template.html" %}
+        <div class="popup-suite-template">
+            {% include "desktop/components/popup-suite.html" %}
+        </div>
+    </div>
+
+
 </body>
-{% block footer_js %}
 
-{% endblock footer_js %}
+{% block footer_js %}{% endblock footer_js %}
+
 </html>

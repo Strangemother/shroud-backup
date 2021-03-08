@@ -4,7 +4,8 @@
     {% verbatim %}
 
     <div id="socket-bar">
-        <div :class="['indicator', {'connected': connected}]">
+        <div @click='reconnect'
+            :class="['indicator', {'connected': connected}]">
             <div class="led"></div>
         </div>
 

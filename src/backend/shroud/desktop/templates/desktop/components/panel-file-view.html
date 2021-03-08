@@ -1,0 +1,24 @@
+<div class="start-page" v-if='showStartPage'>
+    <h3>Getting Started</h3>
+</div>
+
+{% include "desktop/components/panel-drive-list.html" %}
+
+
+<div :class="['directory-content', {hidden: currentPath != 'root'}]">
+
+    {% include "desktop/components/panel-top-bar.html" %}
+
+    <div class="horiz">
+        <action-panel @filter='actionFilterView' ref='actionpanel'></action-panel>
+
+        <div class="vert">
+            {% include "desktop/components/panel-file-view-filter-bar.html" %}
+
+            {% include "desktop/components/file-list.html" %}
+
+        </div>
+
+    </div>
+
+</div>

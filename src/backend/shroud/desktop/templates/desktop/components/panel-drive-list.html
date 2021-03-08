@@ -1,0 +1,29 @@
+{% verbatim %}
+<div class="drive-list" v-if='showDriveList'>
+
+    <div :class="['drive-item']"
+        :tabindex="index+1"
+        @click="selectDrive(index)"
+        v-for='(disk, index) in disks'>
+
+        <div class="horiz">
+            <div class="icon-container">
+
+                <div class="icon">
+                    <div :class="['img-container', 'type-'  + disk.drive_type]">
+                        <div class="name">
+                            <div class="text">{{ disk.name }}</div>
+                        </div>
+                        <img :src="'/static/img/icons/type-' + disk.drive_type + '.png' " alt="HDD">
+                    </div>
+                </div>
+            </div>
+            <div class="labels-container">
+                <!-- <div class="name">{{ disk.name }}</div> -->
+                <div class="volume_name">{{ disk.volume_name }}</div>
+                <!-- <div class="drive_type_str">{{ disk.drive_type_str }}</div> -->
+            </div>
+        </div>
+    </div>
+</div>
+{% endverbatim %}

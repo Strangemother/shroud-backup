@@ -19,4 +19,6 @@ from django.urls import include, path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('desktop/', include('desktop.urls')),
+    path('drives/', include('drives.urls')),
+    path('tags/', include('tagging.urls')),
 ]

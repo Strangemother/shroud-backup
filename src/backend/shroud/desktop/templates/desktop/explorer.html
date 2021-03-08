@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body %}
+
+<div id="explorer" class="explorer">
+
+    {% verbatim %}
+
+        <!-- Top Bar -->
+        <div class="panel-tab-list">
+            <a href="#" @click='newPanelClick' class="btn new-panel">New</a>
+            <div class="tabs">
+                <ul class="horiz no-list no-margin no-padding tab-list">
+                    <li class="tab-item" v-for='label in tabs'>{{ label }}</li>
+                </ul>
+            </div>
+            <div class="spacer"></div>
+        </div>
+
+        <!-- Visible panels of drive explorers. -->
+        <div class="views">
+            <div class="panel-container"
+                @dragstart='dragStart'
+                @dragend='dragStop'
+                v-for='panel in panels'>
+                <panel @spawn='spawnPanel'
+                    @closepanel='closePanel(panel)'
+                    :config='panel'></panel>
+            </div>
+        </div>
+
+        <!-- Drop space; for drag-drop live-spots. -->
+        <div :class="['drop-panel', {hidden: !dragMode}]">
+            <ul class="horiz no-list no-margin no-padding drop-list">
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+            </ul>
+        </div>
+    {% endverbatim %}
+
+</div>
+
+<div class="templates">
+    {% include "desktop/components/panel.html" %}
+    {% include "desktop/components/action-panel.html" %}
+</div>
+
+{% endblock body %}
+
+{% block footer_js %}
+<script src="{% static 'js/desktop/explorer.js' %}"></script>
+<script src="{% static 'js/desktop/action-panel.js' %}"></script>
+<script src="{% static 'js/desktop/popup-suite.js' %}"></script>
+<script src="{% static 'js/desktop/tag-popup.js' %}"></script>
+<script src="{% static 'js/desktop/address-bar.js' %}"></script>
+<script src="{% static 'js/desktop/panel.js' %}"></script>
+<script src="{% static 'js/desktop/button-counter.js' %}"></script>
+<script src="{% static 'js/desktop/main.js' %}"></script>
+{% endblock footer_js %}
+

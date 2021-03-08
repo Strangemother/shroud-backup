@@ -21,5 +21,7 @@ from . import views
 urlpatterns = [
     # path('admin/', admin.site.urls),
     path('', views.WelcomePage.as_view(), name='welcome'),
+    path('configured/', views.ConfiguredPage.as_view(), name='configured'),
+    path('explorer/', views.ExplorerView.as_view(), name='explorer'),
     path('d/', views.Example.as_view(), name='example'),
 ]

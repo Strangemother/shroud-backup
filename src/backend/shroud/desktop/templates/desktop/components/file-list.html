@@ -1,0 +1,24 @@
+{% verbatim %}
+<div class="scrollable">
+
+    <ul class="file-list">
+        <li :class="['file-item', {selected: file.selected, isFile: file.isFile, hidden: file.hidden}]"
+            @click='clickItem(file)'
+            @click.middle='middleClickItem($event, file)'
+            draggable=true
+            @dragover='entityDragOver($event, file)'
+            @dragstart='entityDragStart($event, file)'
+            @dragleave='entityDragLeave($event, file)'
+            @drop='entityDragDrop($event, file)'
+            v-for='file in files'>
+            <div class="icon">{{ file.icon }}</div>
+            <div class="label">{{ file.name }}</div>
+        </li>
+    </ul>
+
+    <div class="zero-list" v-if='files.length == 0'>
+        <p>Empty Directory {{ currentPath }}</p>
+    </div>
+
+</div>
+{% endverbatim %}

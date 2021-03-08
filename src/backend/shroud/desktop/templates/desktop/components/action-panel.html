@@ -1,0 +1,64 @@
+{% verbatim %}
+<div class="action-panel-template">
+
+    <div class="action-panel">
+        <p class='caption'>{{ caption }}</p>
+        <div class="file-info" v-if='!fileInfo.hidden'>
+            <ul>
+                <li>name: {{ fileInfo.name }}</li>
+                <li>size: {{ fileInfo.size }}</li>
+                <li>accessed: {{ fileInfo.accessed }}</li>
+                <li>modified: {{ fileInfo.modified }}</li>
+
+            </ul>
+        </div>
+        <div class="sizes" v-if='itemsCount.total > 0'>
+            <ul>
+                <li>Files: {{ fileBytes }} B</li>
+                <li>Folders: {{ dirBytes }} B</li>
+                <li>~total: {{ totalBytes }} B</li>
+            </ul>
+        </div>
+
+        <div class="counts" v-if='itemsCount.total > 0'>
+            <ul>
+                <li>
+                    <a @click='filterView("files")' href="#">
+                        files: <span class="integer">{{ itemsCount.files }}</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a @click='filterView("dirs")' href="#">
+                        folders: <span class="integer">{{ itemsCount.dirs }}</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a @click='filterView("__all__")' href="#">
+                        All: <span class="integer">{{ itemsCount.total }}</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="tools">
+            <ul>
+                <li v-for='item in tools'>
+                    <a href="#"
+                        @click='actionClick(item)'
+                        class="btn">{{ item.label || item }}</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="errors" v-if='config.error'>
+            <p>{{config.error}}</p>
+        </div>
+
+        <popup-suite :popups='popups'></popup-suite>
+
+    </div>
+
+</div>
+{% endverbatim %}

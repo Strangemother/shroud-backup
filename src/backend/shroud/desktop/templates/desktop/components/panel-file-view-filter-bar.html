@@ -1,0 +1,4 @@
+<div class="filter-bar" v-if='filterType != "__all__"'>
+    <div class="info stretch">Filtered by {{ filterType }}</div>
+    <a href="#"  @click='actionFilterView({type:"__all__"})' class="btn clear">clear</a>
+</div>
