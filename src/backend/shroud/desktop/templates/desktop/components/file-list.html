@@ -1,7 +1,14 @@
 {% verbatim %}
 <div class="scrollable">
 
-    <ul class="file-list">
+    <ul :class="{'file-list': display.file, 'table-list': display.table}">
+        <li :class="['file-item', 'header']">
+            <div class="icon">Icon</div>
+            <div class="label">Name</div>
+            <div class="size">Size</div>
+            <div class="modified">Modified</div>
+        </li>
+
         <li :class="['file-item', {selected: file.selected, isFile: file.isFile, hidden: file.hidden}]"
             @click='clickItem(file)'
             @click.middle='middleClickItem($event, file)'
@@ -11,8 +18,11 @@
             @dragleave='entityDragLeave($event, file)'
             @drop='entityDragDrop($event, file)'
             v-for='file in files'>
+
             <div class="icon">{{ file.icon }}</div>
             <div class="label">{{ file.name }}</div>
+            <div class="size">{{ file.size }}</div>
+            <div class="modified">{{ file.modified }}</div>
         </li>
     </ul>
 

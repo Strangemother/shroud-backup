@@ -15,11 +15,16 @@ App.component('action-panel', {
         }
     }
     , template: cutTemplate('.templates .action-panel-template')
+    , emits: ['setdisplaystyle']
     , methods: {
         setContext(data) {
             this.config = data
             this.computeCounts(data)
             this.fileInfo.path = data.path
+        }
+
+        , displayStyle(type){
+            this.$emit('setdisplaystyle', type)
         }
 
         , computeCounts(data) {
@@ -98,6 +103,7 @@ App.component('action-panel', {
                 })
             }
         }
+
         , actionCalled(ev) {
             console.log('actionCalled', ev)
         }

@@ -74,6 +74,7 @@ class EntryAction(object):
             'tag',
             'open',
             {'label': 'reveal', 'action': 'locate'},
+            'track',
         ]
 
 
@@ -106,6 +107,7 @@ class Action(TypedRequestDevice, OpenFileMixin):
         sp = explore(path)
         print('Explorer Open', sp.returncode, sp.stderr, sp.stdout)
         # sp.kill()
+
 
 class Directory(TypedRequestDevice, OpenFileMixin):
 

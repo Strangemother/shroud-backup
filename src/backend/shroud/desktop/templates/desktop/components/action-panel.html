@@ -2,7 +2,23 @@
 <div class="action-panel-template">
 
     <div class="action-panel">
-        <p class='caption'>{{ caption }}</p>
+        <div class="horiz">
+            <p class='caption'>{{ caption }}</p>
+            <div class="display-style-buttons">
+                <ul>
+                    <li><a
+                        href="#"
+                        class="btn thin"
+                        @click='displayStyle("table")'>Table</a>
+                    </li>
+                    <li><a
+                        href="#"
+                        class="btn thin"
+                        @click='displayStyle("list")'>List</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <div class="file-info" v-if='!fileInfo.hidden'>
             <ul>
                 <li>name: {{ fileInfo.name }}</li>

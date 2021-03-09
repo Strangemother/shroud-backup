@@ -100,7 +100,7 @@ a.btn, button {
     letter-spacing: 0.7px;
     cursor: pointer;
     text-decoration: none;
-    /* display: inline-block; */
+    display: inline-block;
 }
 
 .actions {
@@ -384,7 +384,7 @@ a {
     color: inherit;
 }
 
-.action-panel .counts ul, .sizes ul, .file-info ul {
+.action-panel .counts ul, .sizes ul, .file-info ul, .display-style-buttons ul {
     margin: 0;
     padding: 0em;
     list-style: none;
@@ -450,7 +450,7 @@ li.file-item.selected {
 }
 
 .panel-title.hidden {
-    /* display: none; */
+    display: none;
 }
 
 .tabname span.text {
@@ -624,4 +624,36 @@ div#privacy_panel.dragging {
 .file-info ul li {
     word-break: break-all;
     padding: 0 0.5em 0.3em;
+}
+
+.table-list li.file-item {
+    display: flex;
+}
+
+.table-list li.file-item > * {
+    flex-grow: 1;
+    flex-basis: 20%;
+}
+
+ul.table-list {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.table-list .file-item .icon {
+    flex-basis: 4%;
+    flex-grow: 0;
+}
+
+.display-style-buttons ul {
+    display: flex;
+}
+
+.file-list li.file-item.header {
+    display: none;
+}
+
+.file-list .file-item .modified, .file-list .file-item .size {
+    display: none;
 }

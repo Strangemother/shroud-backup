@@ -17,6 +17,10 @@ const PanelComponent = {
             , disks: []
             , currentPath: 'root'
             , filterType: '__all__'
+            , display: {
+                file: true
+                , table: false
+            }
         }
     }
     , emits: ['select', 'closepanel']
@@ -30,7 +34,9 @@ const PanelComponent = {
         } else {
             this.navigateToDir(this.config.path)
         }
+        window.panel = this
     }
+
     , methods: {
 
         startPage() {
@@ -64,6 +70,11 @@ const PanelComponent = {
         , closePanel(){
             this.$emit('closepanel')
         }
+
+        , setDisplayStyle(type) {
+            console.log('setdisplaystyle', type)
+        }
+
         , showDrives() {
             /*
             Present a list of drives as a standard start location for a panel.
@@ -223,8 +234,8 @@ const PanelComponent = {
               d = JSON.stringify(file)
               dt.setData('text/json', d, 0);
               dt.setData('application/object', d, 0);
-
         }
+
         , entityDragLeave(event, file){
             event.target.classList.remove('drag-over-accept')
         }
@@ -239,8 +250,9 @@ const PanelComponent = {
                 return this.announceDragOverAccept(event,file)
             }
         }
+
         , entityDragDrop(event, file){
-//             console.log('drag drop', file)
+            // console.log('drag drop', file)
             let other = JSON.parse(event.dataTransfer.getData('application/object'))
             let dest = file
             console.log('Ask about', other.name, 'to', dest.name)

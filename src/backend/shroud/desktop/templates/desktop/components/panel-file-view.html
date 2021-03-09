@@ -10,7 +10,9 @@
     {% include "desktop/components/panel-top-bar.html" %}
 
     <div class="horiz">
-        <action-panel @filter='actionFilterView' ref='actionpanel'></action-panel>
+        <action-panel @filter='actionFilterView'
+            @setdisplaystyle='setDisplayStyle'
+            ref='actionpanel'></action-panel>
 
         <div class="vert">
             {% include "desktop/components/panel-file-view-filter-bar.html" %}
